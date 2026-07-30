@@ -50,7 +50,7 @@ footer{
     text-align: center;
 }
 h1{
-    
+    font-family: "Orbitron", sans-serif;
     font-size: 2rem;
     color: var(--rosa);
     margin: 0;
@@ -60,6 +60,16 @@ h1{
 h2{
     font-family: "Orbitron", sans-serif;
     font-size: 1.5rem;
+    color: var(--rosa);
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+h3{
+
+    font-family: "Orbitron", sans-serif !important;
+    font-size: 1.2rem;
     color: var(--rosa);
     margin: 0;
     padding: 0.5rem 0;
