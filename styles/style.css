@@ -14,21 +14,40 @@
 
 }
 
-header{
-
-    display:flex;
+header {
+    display: flex;
     align-items: center;
-    padding:1rem 2rem;
-    /* background-color: var(--principal); */
+    justify-content: space-between;
+
+    width: 95%;
+    margin: 1rem auto;
+
+    padding: 1rem 2rem;
+
+    border: 2px solid var(--detalle);
+    border-radius: 20px;
+
+    background: rgba(6, 27, 69, 0.75);
+
+    box-shadow:
+        0 0 10px var(--detalle),
+        inset 0 0 10px rgba(0, 207, 232, 0.2);
 }
 
-.logoPrincipal{
+.logoPrincipal {
     width: 150px;
     height: auto;
     margin-right: 50px;
-    /*border-radius: 10px;
-    border: none;
-    background-color: var(--principal);*/
+
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logoPrincipal:hover {
+    transform: scale(1.05);
+
+    filter:
+        drop-shadow(0 0 5px var(--rosa))
+        drop-shadow(0 0 10px var(--detalle));
 }
 
 body{
@@ -45,16 +64,88 @@ body{
 }
 footer{
 
-    color: var(--principal);
-    padding: 1rem;
-    text-align: center;
+    width:95%;
+
+    margin:1rem auto 1rem;
+
+    padding:0.5rem;
+
+    text-align:center;
+
+    color:var(--principal);
+
+    border:2px solid var(--detalle);
+
+    border-radius:20px;
+
+    background:rgba(6, 27, 69, 0.75);
+
+    box-shadow:
+        0 0 10px var(--detalle),
+        inset 0 0 10px rgba(0, 207, 232, 0.2);
+
 }
+
+footer h2{
+
+    font-size:.9rem;
+
+    color:var(--principal);
+
+    margin-bottom:0.5rem;
+
+}
+.navBarraFooter{
+
+    margin-top:1rem;
+
+    padding-top:1rem;
+
+    border-top:1px solid var(--detalle);
+
+}
+.navBarraFooter ul{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    list-style:none;
+
+    gap:1rem;
+
+    padding:0;
+
+}
+.footerImagenes{
+
+    width:30px;
+
+    height:auto;
+
+    transition:transform .3s ease, filter .3s ease;
+
+}
+
+.footerImagenes:hover{
+
+    transform:scale(1.2);
+
+    filter:
+        drop-shadow(0 0 5px var(--rosa))
+        drop-shadow(0 0 8px var(--detalle));
+
+}
+
 h1{
     font-family: "Orbitron", sans-serif;
     font-size: 2rem;
-    color: var(--rosa);
+    color: var(--detalle);
     margin: 0;
     padding: 0.5rem 0;
+    text-align: center;
 }
 
 h2{
@@ -68,7 +159,7 @@ h2{
 
 h3{
 
-    font-family: "Orbitron", sans-serif !important;
+    font-family: "Orbitron", sans-serif;
     font-size: 1.2rem;
     color: var(--rosa);
     margin: 0;
@@ -87,7 +178,7 @@ p{
 }
 
 .navBarraSuperior ul{
-
+    
     display:flex;
 
     justify-content:center;
@@ -95,10 +186,10 @@ p{
     list-style:none;
 
     gap:2.5rem;
-
+    
 }
 .navBarraSuperior a{
-    
+    flex: 1;
     display: inline-block;
     background-color:#F8F4EC;
     /*border: 2px solid var(--detalle);*/
@@ -119,22 +210,24 @@ p{
     transform: scale(1.1);
     box-shadow: 0 0px 5px rgb(231, 228, 228);
 }
-.navBarraFooter ul{
+.navBarraSuperior::after {
+    content: "";
+    
 
-    display:flex;
+    width: 80%;
+    height: 2px;
 
-    justify-content:center;
+    margin: 0.8rem auto 0;
 
-    list-style:none;
-
-
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--rosa),
+        var(--detalle),
+        transparent
+    );
 }
 
-.footerImagenes{
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
-}
 .tarjeta{
 
     background-color:#F8F4EC;
