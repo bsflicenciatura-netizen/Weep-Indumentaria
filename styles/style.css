@@ -24,7 +24,7 @@ header {
 
     padding: 1rem 2rem;
 
-    border: 2px solid var(--detalle);
+    /*border: 2px solid var(--detalle);*/
     border-radius: 20px;
 
     background: rgba(6, 27, 69, 0.75);
@@ -74,7 +74,7 @@ footer{
 
     color:var(--principal);
 
-    border:2px solid var(--detalle);
+    /*border:2px solid var(--detalle);*/
 
     border-radius:20px;
 
@@ -205,7 +205,7 @@ p{
     
 }
 .navBarraSuperior a:hover{
-    background-color:var(--principal);
+    background-color:var(--sombra);
     color:var(--rosa);
     transform: scale(1.1);
     box-shadow: 0 0px 5px rgb(231, 228, 228);
@@ -708,7 +708,7 @@ box-shadow:0 0 10px var(--rosa);
 
 .tarjetaInfo{
 
-    padding:2rem;
+    padding: 2rem;
 
     border:3px solid var(--detalle);
 
@@ -722,7 +722,7 @@ box-shadow:0 0 10px var(--rosa);
 
     color:var(--rosa);
 
-    margin-bottom:1rem;
+    margin-bottom:0.5rem;
 
 }
 
