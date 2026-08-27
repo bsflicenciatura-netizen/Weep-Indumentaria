@@ -1,0 +1,342 @@
+@use "variables" as *;
+
+// ===========================
+// MENÚ PRINCIPAL
+// ===========================
+
+.menuPrincipal {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.menuGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+}
+
+.menuCard {
+    @include tarjeta;
+
+    padding: 2rem;
+
+    transition: .3s;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    h3 {
+        color: $rosa;
+    }
+
+    p {
+        color: $sombra;
+    }
+
+    a {
+        display: inline-block;
+
+        margin-top: 1rem;
+
+        padding: .8rem 1.5rem;
+
+        background: $rosa;
+
+        color: white;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        &:hover {
+            background: $detalle;
+        }
+    }
+}
+// ===========================
+// PRODUCTOS DESTACADOS
+// ===========================
+
+.destacados {
+    width: 90%;
+    margin: 4rem auto;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+.contenedorDestacados {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 2rem;
+}
+
+.productoInicio {
+    @include tarjeta;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: .3s;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    h3 {
+        color: $rosa;
+        margin-top: 1rem;
+    }
+
+    p {
+        color: $sombra;
+    }
+
+    a {
+        display: inline-block;
+
+        margin: 1rem;
+
+        padding: .8rem 2rem;
+
+        border-radius: 10px;
+
+        background: $rosa;
+
+        color: white;
+
+        text-decoration: none;
+
+        &:hover {
+            background: $detalle;
+        }
+    }
+}
+.precio {
+    color: $rosa;
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    margin: 1rem 0;
+}
+
+.subtitulo {
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 2rem;
+}
+
+form {
+    width: 500px;
+
+    margin: 2rem auto;
+
+    background-color: $blanco-card;
+
+    padding: 2rem;
+
+    border-radius: 15px;
+}
+
+.form-label {
+    display: block;
+
+    margin-top: 1rem;
+
+    color: $sombra;
+
+    font-weight: bold;
+}
+
+.form-control {
+    border: 2px solid $detalle;
+
+    border-radius: 10px;
+
+    &:focus {
+        border-color: $rosa;
+
+        box-shadow: 0 0 10px $rosa;
+    }
+}
+
+// ===========================
+// NAVEGACIÓN SUPERIOR
+// ===========================
+
+.navBarraSuperior {
+
+    ul {
+        display: flex;
+
+        justify-content: center;
+
+        list-style: none;
+
+        gap: 2.5rem;
+    }
+
+    a {
+        flex: 1;
+
+        display: inline-block;
+
+        background-color: $blanco-card;
+
+        border-radius: 10px;
+
+        padding: 1rem 1.5rem;
+
+        text-align: center;
+
+        text-decoration: none;
+
+        color: $sombra;
+
+        font-family: $fuente-titulo;
+
+        font-weight: bold;
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+
+        &:hover {
+            background-color: $sombra;
+
+            color: $rosa;
+
+            transform: scale(1.1);
+
+            box-shadow: 0 0 5px rgb(231, 228, 228);
+        }
+    }
+
+    &::after {
+        content: "";
+
+        display: block;
+
+        width: 80%;
+
+        height: 2px;
+
+        margin: 0.8rem auto 0;
+
+        background: linear-gradient(
+            90deg,
+            transparent,
+            $rosa,
+            $detalle,
+            transparent
+        );
+    }
+}
+// ===========================
+// TARJETA GENERAL
+// ===========================
+
+.tarjeta {
+    background-color: $blanco-card;
+
+    border-radius: 15px;
+
+    padding: 2rem;
+
+    margin: 2rem auto;
+
+    width: 80%;
+}
+// ===========================
+// GALERÍA
+// ===========================
+
+.galeria {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 2rem;
+
+    padding: 2rem;
+}
+
+.producto {
+    border: 2px solid $detalle;
+
+    border-radius: 10px;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    cursor: pointer;
+
+    img {
+        width: 100%;
+
+        height: auto;
+
+        border-radius: 8px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+// ===========================
+// BOTÓN PRINCIPAL
+// ===========================
+
+.botonPrincipal {
+    background: $rosa;
+
+    color: white;
+
+    font-weight: bold;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    border: 2px solid $detalle;
+
+    transition: .3s;
+
+    &:hover {
+        background: $detalle;
+
+        color: $sombra;
+
+        transform: scale(1.05);
+    }
+}

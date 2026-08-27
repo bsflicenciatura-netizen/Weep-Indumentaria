@@ -1,0 +1,25 @@
+// Colores
+$fondo: #000000;
+$principal: #FFF1D0;
+$rosa: #FF2B78;
+$detalle: #00CFE8;
+$sombra: #061B45;
+$blanco-card: #F8F4EC;
+
+// Tipografías
+$fuente-titulo: "Orbitron", sans-serif;
+$fuente-texto: "Poppins", sans-serif;
+
+@mixin tarjeta {
+    background: $blanco-card;
+
+    border: 3px solid $detalle;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+%tarjetaBase {
+    border: 3px solid $detalle;
+    border-radius: 15px;
+}

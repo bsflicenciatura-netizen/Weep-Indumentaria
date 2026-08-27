@@ -1,0 +1,58 @@
+@use "variables" as *;
+footer {
+    width: 95%;
+
+    margin: 1rem auto;
+
+    padding: 0.5rem;
+
+    text-align: center;
+
+    color: $principal;
+
+    border-radius: 20px;
+
+    background: rgba(6, 27, 69, 0.75);
+
+    box-shadow:
+        0 0 10px $detalle,
+        inset 0 0 10px rgba(0, 207, 232, 0.2);
+
+    h2 {
+        font-size: 0.9rem;
+        color: $principal;
+        margin-bottom: 0.5rem;
+    }
+
+    .navBarraFooter {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid $detalle;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 1rem;
+            padding: 0;
+        }
+    }
+
+    .footerImagenes {
+        width: 30px;
+        height: auto;
+
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+
+            filter:
+                drop-shadow(0 0 5px $rosa)
+                drop-shadow(0 0 8px $detalle);
+        }
+    }
+}

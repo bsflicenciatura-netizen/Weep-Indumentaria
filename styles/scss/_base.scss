@@ -1,0 +1,51 @@
+@use "variables" as *;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(
+        180deg,
+        $sombra,
+        $rosa,
+        $detalle
+    );
+
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $fuente-titulo;
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: $detalle;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: $rosa;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: $rosa;
+}
+
+p {
+    font-family: $fuente-texto;
+    font-size: 1rem;
+    color: $sombra;
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: bold;
+}

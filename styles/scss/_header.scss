@@ -1,0 +1,35 @@
+@use "variables" as *;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 95%;
+    margin: 1rem auto;
+
+    padding: 1rem 2rem;
+
+    border-radius: 20px;
+
+    background: rgba(6, 27, 69, 0.75);
+
+    box-shadow:
+        0 0 10px $detalle,
+        inset 0 0 10px rgba(0, 207, 232, 0.2);
+
+    .logoPrincipal {
+        width: 150px;
+        height: auto;
+        margin-right: 50px;
+
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+
+            filter:
+                drop-shadow(0 0 5px $rosa)
+                drop-shadow(0 0 10px $detalle);
+        }
+    }
+}
