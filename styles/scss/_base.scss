@@ -1,4 +1,5 @@
 @use "variables" as *;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +14,7 @@ body {
         $detalle
     );
 
-    font-family: Arial, sans-serif;
+    font-family: $fuente-texto;
 }
 
 h1,

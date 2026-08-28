@@ -27,15 +27,17 @@
     transform: translateY(-50%);
 
     h1 {
-        color: white;
-        font-size: 3rem;
-    }
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px $sombra;
+}
 
-    p {
-        color: white;
-        margin: 1rem 0;
-        font-size: 1.2rem;
-    }
+p {
+    color: white;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px $sombra;
+}
 
     a {
         display: inline-block;
@@ -250,26 +252,48 @@
     }
 }
 
+.formularioContacto {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-sizing: border-box;
+}
 
 // ===========================
 // TABLET
 // ===========================
 
-@media (max-width: 768px) {
+@media (max-width: 820px)  {
 
-    header {
-        flex-direction: column;
+header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 1rem;
+}
 
-        gap: 1.5rem;
+.logoPrincipal {
+    width: 130px;
+    margin: 0;
+}
 
-        text-align: center;
+.navBarraSuperior {
+    width: auto;
+
+    ul {
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+        padding: 0;
+        margin: 0;
     }
 
-    .navBarraSuperior ul {
-        flex-direction: column;
-
-        gap: 1rem;
+    a {
+        font-size: .8rem;
+        padding: .5rem .7rem;
     }
+}
 
     .bannerTexto {
         left: 5%;
@@ -287,9 +311,30 @@
         }
     }
 
-    .logoPrincipal {
-        margin-right: 0;
-    }
+
+.nosotros {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+.nosotrosImagen,
+.nosotrosTexto {
+    width: 100%;
+    flex: none;
+}
+
+.nosotrosImagen img {
+    width: 100%;
+    height: auto;
+}
+// FORMULARIO TABLET
+.formularioContacto {
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-sizing: border-box;
+}
 }
 
 
@@ -325,4 +370,31 @@
 
         padding: 1rem;
     }
+        form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .formularioContacto {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formularioContacto input,
+.formularioContacto select,
+.formularioContacto textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 }
