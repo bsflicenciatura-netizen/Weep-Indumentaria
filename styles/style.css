@@ -363,57 +363,6 @@ form {
   background: #00CFE8;
 }
 
-.destacados {
-  width: 90%;
-  margin: 4rem auto;
-}
-.destacados h2 {
-  margin-bottom: 2rem;
-}
-
-.contenedorDestacados {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.productoInicio {
-  background: #F8F4EC;
-  border: 3px solid #00CFE8;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  text-align: center;
-  transition: 0.3s;
-}
-.productoInicio:hover {
-  transform: translateY(-10px);
-}
-.productoInicio img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-.productoInicio h3 {
-  color: #FF2B78;
-  margin-top: 1rem;
-}
-.productoInicio p {
-  color: #061B45;
-}
-.productoInicio a {
-  display: inline-block;
-  margin: 1rem;
-  padding: 0.8rem 2rem;
-  border-radius: 10px;
-  background: #FF2B78;
-  color: white;
-  text-decoration: none;
-}
-.productoInicio a:hover {
-  background: #00CFE8;
-}
-
 .contenidoPrincipal {
   padding-top: 2rem;
   padding-bottom: 2rem;
